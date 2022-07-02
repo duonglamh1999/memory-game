@@ -67,7 +67,7 @@ function handleCardClick(event) {
 
   if (noflip){return}
   let target = event.target;
-  if (target.classList.contains('flip')){return}; // can't selected flipped card
+  if (target.classList.contains('flip')){return}; // can't selected flipped card + can't selecte the same card
   target.style.backgroundColor= target.classList[0];
   target.classList.add('flip')
   if (!card1)
@@ -83,7 +83,7 @@ function handleCardClick(event) {
     console.log(card1,card2)
   }
   else{
-    noflip=true;
+    noflip=true; // so can't select any card while script running
     setTimeout(()=>{
     card1.classList.remove('flip');
     card2.classList.remove('flip');
