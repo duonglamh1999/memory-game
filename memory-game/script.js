@@ -67,7 +67,7 @@ function handleCardClick(event) {
 
   if (noflip){return}
   let target = event.target;
-  if (target.classList.contains('flip')){return};
+  if (target.classList.contains('flip')){return}; // can't selected flipped card
   target.style.backgroundColor= target.classList[0];
   target.classList.add('flip')
   if (!card1)
@@ -75,7 +75,7 @@ function handleCardClick(event) {
     card1= this;
   }
   else{
-    card2=card1===this? null: this;
+    card2=this;
     if(card1.className==card2.className)
   {
     card2=null;
