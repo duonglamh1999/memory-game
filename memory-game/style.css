@@ -1,0 +1,33 @@
+
+
+#game> div {
+  position: relative;
+  transform-style: preserve-3d;
+  transform-origin: center right;
+  transition: transform 1s;
+  border: 1px solid black;
+  border-radius: 2rem;
+  width:15% ;
+  height: 25rem;
+  margin: 1rem;
+  background-color: gray;
+}
+#game> .flip{
+  transform: translateX(-100%) rotateY(-180deg);
+}
+
+#game h1{
+  display:inline;
+}
+#game{
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: antiquewhite;
+  padding:3rem;
+}
+.flip{
+  background-color: aqua;
+}
